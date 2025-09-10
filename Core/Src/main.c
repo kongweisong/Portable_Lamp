@@ -76,6 +76,7 @@ uint8_t beep_unlock; // 按键接触警报
 
 uint8_t tim1_1s;
 uint16_t tim1_count;
+uint16_t abc;
 typedef struct
 {
 	float Battery;
