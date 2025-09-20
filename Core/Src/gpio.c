@@ -49,14 +49,14 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, BEEP_Pin|E_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_F_Pin|LED_C_Pin|LED_AC_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, LED_F_Pin|LED_C_Pin|LED_AC_Pin|E_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, F_Pin|D_Pin|C_Pin|B_Pin
-                          |A_Pin, GPIO_PIN_RESET);
+                          |A_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : KEY_Pin */
   GPIO_InitStruct.Pin = KEY_Pin;
